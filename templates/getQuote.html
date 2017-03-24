@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<script>
+function validateForm() {
+    var x = document.forms["getQuote"]["origin_zip_code"].value;
+    if (x == "") {
+        alert("Zip Code must be filled out");
+        return false;
+    }
+}
+function validateZipCode(){
+    var isValidZip = /(^\d{5}$)|(^\d{5}-\d{4}$)/.test("90210");
+    alert(isValidZip);
+}
+function Weight(){
+
+}
+function validateCost_of_good(){
+
+}
+function validateWidth(){
+
+}
+function validateHeight(){
+
+}
+function validateLength(){
+
+}
+</script>
+<body>
+
+<form name="getQuote" action="/sumit/getQuote.php" method="POST"  >
+
+Orgin Zip Code: <input type="text" name="origin_zip_code" value="04012-090"><br>
+Destination Zip Code: <input type="text" name="destination_zip_code" value="04037-003"><br>
+Weight: <input type="text" name="weight" value="0.5"><br>
+Volume Type: <input type="text" name="volume_type" value="BOX"><br>
+Cost of Good: <input type="text" name="cost_of_goods" value="100"><br>
+Width: <input type="text" name="width" value="10"><br>
+Height: <input type="text" name="height" value="10"><br>
+Length: <input type="text" name="length" value="25"><br>
+
+<input type="submit" value="Submit">
+
+</form>
+
+<p>Click the "Submit" button and the form-data will be sent to a page on the server called "/action_page.php".</p>
+
+</body>
+</html>
